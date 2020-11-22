@@ -13,9 +13,9 @@ import static utils.Driver.navigate;
 
 public class SignInSteps {
 
-    @Given("Open web site")
-    public void navigateToSinglePage() {
-        navigate("https://adoring-pasteur-3ae17d.netlify.app");
+    @Given("Open web site {string}")
+    public void navigateToSinglePage(String url) {
+        navigate(url);
     }
 
     @And("Click on Sign In header button")
@@ -24,16 +24,12 @@ public class SignInSteps {
         Thread.sleep(3000);
     }
 
-    @And("Input name")
-    public void inputName() {
-        WebElement input = getElement(By.xpath("//*[@id=\"myModal\"]/div/div/div[2]/div[1]/form/div[1]/input"));
-        input.sendKeys("jora");
-    }
-
-    @And("Input email")
-    public void inputEmail() {
-        WebElement input = getElement(By.xpath("//*[@id=\"myModal\"]/div/div/div[2]/div[1]/form/div[2]/input"));
-        input.sendKeys("jora@dada.com");
+    @And("Input {string} {string}")
+    public void inputName(String name, String email) {
+        WebElement nameInput = getElement(By.xpath("//*[@id=\"myModal\"]/div/div/div[2]/div[1]/form/div[1]/input"));
+        nameInput.sendKeys(name);
+        WebElement emailInput = getElement(By.xpath("//*[@id=\"myModal\"]/div/div/div[2]/div[1]/form/div[2]/input"));
+        emailInput.sendKeys(email);
     }
 
     @And("Click on Sign In button")

@@ -1,11 +1,13 @@
 Feature: Check sign in functionality
 
-  Background: User open web site
-    Given Open web site
+  Scenario Outline: Check sign in
+    Given Open web site "<url>"
 
-  Scenario: Check sign in
     And Click on Sign In header button
-    And Input name
-    And Input email
+    And Input "<name>" "<email>"
     And Click on Sign In button
     Then User login
+    Examples:
+      |url|name|email|
+      |https://adoring-pasteur-3ae17d.netlify.app|jora|jora@jora.com|
+      |https://adoring-pasteur-3ae17d.netlify.app|joraik|jordadadaa@jora.com|
