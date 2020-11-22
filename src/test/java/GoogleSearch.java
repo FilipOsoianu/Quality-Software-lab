@@ -19,11 +19,11 @@ public class GoogleSearch {
     }
 
     @Test
-    public void Test1() {
-        WebElement input = driver.findElement(By.xpath("/html/body/div[2]/div[2]/form/div[2]/div[1]/div[1]/div/div[2]/input"));
+    public void googleSearch() {
+        WebElement input = driver.findElement(By.cssSelector("input.gLFyf"));
         input.sendKeys("computer");
-        driver.findElement(By.xpath("/html/body/div[2]/div[2]/form/div[2]/div[1]/div[3]/center/input[1]")).click();
-        boolean displayed = driver.findElement(By.xpath("/html/body/div[4]/form/div[2]/div[1]/div[1]/a/img")).isDisplayed();
+        driver.findElement(By.xpath("//*[@id=\"tsf\"]/div[2]/div[1]/div[3]/center/input[1]")).submit();
+        boolean displayed = driver.findElement(By.xpath("//*[@id=\"logo\"]/img")).isDisplayed();
         Assert.assertTrue(displayed);
     }
 
