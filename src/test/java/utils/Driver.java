@@ -6,7 +6,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.edge.EdgeDriver;
 
 
-
 public class Driver {
     private static WebDriver driver;
 
@@ -23,6 +22,10 @@ public class Driver {
 
     public static void navigate(String url) {
         driver.get(url);
+    }
+
+    public static String getCurrentUrl() {
+      return   driver.getCurrentUrl();
     }
 
     public static WebElement getElement(By selector) {

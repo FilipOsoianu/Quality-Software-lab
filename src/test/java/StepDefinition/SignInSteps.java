@@ -7,8 +7,8 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import static utils.Driver.getElement;
-import static utils.Driver.navigate;
+import static utils.Driver.*;
+import static utils.Driver.getCurrentUrl;
 
 
 public class SignInSteps {
@@ -37,8 +37,9 @@ public class SignInSteps {
         getElement(By.xpath("//*[@id=\"myModal\"]/div/div/div[2]/div[1]/form/input")).submit();
     }
 
-    @Then("User login")
-    public void redirectsToNewPageWithInfo() {
-        Assert.assertTrue(true);
+    @Then("User login {string}")
+    public void redirectsToNewPageWithInfo(String initialUrl) {
+        getCurrentUrl();
+        Assert.assertNotEquals(initialUrl, getCurrentUrl());
     }
 }
