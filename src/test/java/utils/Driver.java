@@ -27,6 +27,13 @@ public class Driver {
     public static String getCurrentUrl() {
       return   driver.getCurrentUrl();
     }
+    public static boolean isElementPresent(WebElement element) {
+        return element.isDisplayed();
+    }
+
+    public static int getListElementSize(By selector) {
+        return driver.findElements(selector).size();
+    }
 
     public static WebElement getElement(By selector) {
         return driver.findElement(selector);
