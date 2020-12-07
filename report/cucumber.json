@@ -1,0 +1,325 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-12-07T11:25:29.968Z",
+        "before": [
+          {
+            "result": {
+              "duration": 4078000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "utils.Driver.setUp()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Check google page is opening or not after entering",
+        "description": "",
+        "id": "check-google-seach;check-google-page-is-opening-or-not-after-entering",
+        "after": [
+          {
+            "result": {
+              "duration": 60000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "utils.Driver.exit()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5059000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Open \"https://www.google.co.in\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.google.co.in\"",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefinition.GoogleSearchSteps.populateURLBox(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1140000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Open google page",
+            "match": {
+              "location": "StepDefinition.GoogleSearchSteps.redirectsToMainPage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-07T11:25:40.395Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3342000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "utils.Driver.setUp()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Check how many results display on a single page",
+        "description": "",
+        "id": "check-google-seach;check-how-many-results-display-on-a-single-page",
+        "after": [
+          {
+            "result": {
+              "duration": 66000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "utils.Driver.exit()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1211000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Google page is opened",
+            "match": {
+              "location": "StepDefinition.GoogleSearchSteps.navigateGooglePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 178000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Input in search \"java\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"java\"",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefinition.GoogleSearchSteps.populateSearchBox(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3799000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Click enter",
+            "match": {
+              "location": "StepDefinition.GoogleSearchSteps.hitEnterKey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2045000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Present list of 10 search result",
+            "match": {
+              "location": "StepDefinition.GoogleSearchSteps.presentSearchResult()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-07T11:25:51.049Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3353000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "utils.Driver.setUp()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Check empty search",
+        "description": "",
+        "id": "check-google-seach;check-empty-search",
+        "after": [
+          {
+            "result": {
+              "duration": 67000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "utils.Driver.exit()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1269000000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "Google page is opened",
+            "match": {
+              "location": "StepDefinition.GoogleSearchSteps.navigateGooglePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2119000000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Click enter",
+            "match": {
+              "location": "StepDefinition.GoogleSearchSteps.hitEnterKey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 11000000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Nothing happens",
+            "match": {
+              "location": "StepDefinition.GoogleSearchSteps.checkPageRedirection()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-12-07T11:25:57.879Z",
+        "before": [
+          {
+            "result": {
+              "duration": 3276000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "utils.Driver.setUp()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Verify wrong input",
+        "description": "",
+        "id": "check-google-seach;verify-wrong-input",
+        "after": [
+          {
+            "result": {
+              "duration": 50000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "utils.Driver.exit()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1547000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Google page is opened",
+            "match": {
+              "location": "StepDefinition.GoogleSearchSteps.navigateGooglePage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 138000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "Input in search \"googne\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"googne\"",
+                  "offset": 16
+                }
+              ],
+              "location": "StepDefinition.GoogleSearchSteps.populateSearchBox(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2730000000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "Click enter",
+            "match": {
+              "location": "StepDefinition.GoogleSearchSteps.hitEnterKey()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2065000000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "Correct search \"google\" appears",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"google\"",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefinition.GoogleSearchSteps.checkDidYouMeanLink(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Check google seach",
+    "description": "",
+    "id": "check-google-seach",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/google_search.feature",
+    "tags": []
+  }
+]
